@@ -1,0 +1,6 @@
+*.png
+*.tiff
+*.avi
+__pycache__/
+*.pyc
+.env

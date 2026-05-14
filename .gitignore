@@ -1,6 +1,19 @@
-*.png
-*.tiff
-*.avi
+# Python
 __pycache__/
 *.pyc
+
+# Large / regenerable caches and source captures (kept out of git)
+_seq_cache/
+wetransfer_*/
+BosonCaptures/
+
+# Raw imagery exports that aren't intended deliverables
+*.tiff
+*.avi
+
+# Local config
 .env
+
+# OS junk
+.DS_Store
+Thumbs.db

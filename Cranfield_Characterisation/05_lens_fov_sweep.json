@@ -1,0 +1,105 @@
+{
+  "camera": {
+    "sensor_w_px": 640,
+    "sensor_h_px": 512,
+    "pixel_pitch_mm": 0.012
+  },
+  "lenses": [
+    {
+      "f_mm": 18.0,
+      "hfov": 24.0,
+      "vfov": 19.3,
+      "label": "18 mm (Boson+ 24\u00b0 HFoV)",
+      "col": "#ffd93d"
+    }
+  ],
+  "standoffs": [
+    300,
+    400,
+    500,
+    750
+  ],
+  "beam_source": "C:\\Users\\cs1d25\\OneDrive - University of Southampton\\Desktop\\thermal-beam-analysis\\Cranfield_Characterisation\\beam_derived_combined.json",
+  "grid": [
+    {
+      "lens_f_mm": 18.0,
+      "lens_label": "18 mm (Boson+ 24\u00b0 HFoV)",
+      "hfov_deg": 24.0,
+      "vfov_deg": 19.3,
+      "standoff_mm": 300,
+      "fov_w_mm": 127.53393700201327,
+      "fov_h_mm": 102.02106108982562,
+      "mm_per_px": 0.19927177656564574,
+      "sigma_x_mm": 105.6914959105299,
+      "sigma_y_mm": 77.58704993145109,
+      "sigma_x_px": 530.3886869082644,
+      "sigma_y_px": 389.35292929398724,
+      "fwhm_x_mm": 248.9034728692979,
+      "fwhm_y_mm": 182.71750258856733,
+      "fwhm_fits_x": false,
+      "fwhm_fits_y": false,
+      "beam_energy_in_fov": 0.22191760813981018,
+      "peak_dT_K": 1.2146315564769614
+    },
+    {
+      "lens_f_mm": 18.0,
+      "lens_label": "18 mm (Boson+ 24\u00b0 HFoV)",
+      "hfov_deg": 24.0,
+      "vfov_deg": 19.3,
+      "standoff_mm": 400,
+      "fov_w_mm": 170.0452493360177,
+      "fov_h_mm": 136.02808145310084,
+      "mm_per_px": 0.26569570208752763,
+      "sigma_x_mm": 119.78076816015995,
+      "sigma_y_mm": 84.46258210571068,
+      "sigma_x_px": 450.81936673819735,
+      "sigma_y_px": 317.8921655190581,
+      "fwhm_x_mm": 282.08370901717666,
+      "fwhm_y_mm": 198.90938085894865,
+      "fwhm_fits_x": false,
+      "fwhm_fits_y": false,
+      "beam_energy_in_fov": 0.3025156269166677,
+      "peak_dT_K": 0.9170941877137839
+    },
+    {
+      "lens_f_mm": 18.0,
+      "lens_label": "18 mm (Boson+ 24\u00b0 HFoV)",
+      "hfov_deg": 24.0,
+      "vfov_deg": 19.3,
+      "standoff_mm": 500,
+      "fov_w_mm": 212.55656167002212,
+      "fov_h_mm": 170.03510181637606,
+      "mm_per_px": 0.33211962760940955,
+      "sigma_x_mm": 133.87004040979002,
+      "sigma_y_mm": 91.33811427997026,
+      "sigma_x_px": 403.07777463615713,
+      "sigma_y_px": 275.0157072541005,
+      "fwhm_x_mm": 315.2639451650555,
+      "fwhm_y_mm": 215.10125912932995,
+      "fwhm_fits_x": false,
+      "fwhm_fits_y": false,
+      "beam_energy_in_fov": 0.3711611319056927,
+      "peak_dT_K": 0.7374959492507565
+    },
+    {
+      "lens_f_mm": 18.0,
+      "lens_label": "18 mm (Boson+ 24\u00b0 HFoV)",
+      "hfov_deg": 24.0,
+      "vfov_deg": 19.3,
+      "standoff_mm": 750,
+      "fov_w_mm": 318.8348425050332,
+      "fov_h_mm": 255.05265272456407,
+      "mm_per_px": 0.49817944141411435,
+      "sigma_x_mm": 169.09322103386515,
+      "sigma_y_mm": 108.52694471561921,
+      "sigma_x_px": 339.4223185001035,
+      "sigma_y_px": 217.8470962341571,
+      "fwhm_x_mm": 398.21453553475243,
+      "fwhm_y_mm": 255.58095480528323,
+      "fwhm_fits_x": false,
+      "fwhm_fits_y": false,
+      "beam_energy_in_fov": 0.4972170650060756,
+      "peak_dT_K": 0.496326131970447
+    }
+  ]
+}

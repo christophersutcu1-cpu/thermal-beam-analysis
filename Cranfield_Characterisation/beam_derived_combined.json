@@ -1,0 +1,76 @@
+{
+  "camera": "FLIR A655sc + FOL18 (45 deg HFOV)",
+  "standoffs_mm": [
+    300,
+    400,
+    500
+  ],
+  "per_standoff": [
+    {
+      "d_mm": 300,
+      "mm_per_px": 0.3883252147247766,
+      "sigma_x_mm": 107.83339471842137,
+      "sigma_y_mm": 77.67006339793448,
+      "fwhm_x_mm": 253.94764456188233,
+      "fwhm_y_mm": 182.91299930213572,
+      "peak_dT_K": 2.303985595703125,
+      "peak_dT_above_bg_K": 1.2737183595487356,
+      "theta_deg": 7.146827579928757,
+      "centroid_px": [
+        304.4844552917441,
+        48.00000000000001
+      ]
+    },
+    {
+      "d_mm": 400,
+      "mm_per_px": 0.5177669529663688,
+      "sigma_x_mm": 115.49697054437692,
+      "sigma_y_mm": 84.29655517274388,
+      "fwhm_x_mm": 271.9953656320077,
+      "fwhm_y_mm": 198.51838743181185,
+      "peak_dT_K": 1.456024169921875,
+      "peak_dT_above_bg_K": 0.822602226302897,
+      "theta_deg": 5.0398224461031695,
+      "centroid_px": [
+        366.50003527454015,
+        48.00000000000001
+      ]
+    },
+    {
+      "d_mm": 500,
+      "mm_per_px": 0.647208691207961,
+      "sigma_x_mm": 136.0119392176815,
+      "sigma_y_mm": 91.42112774645364,
+      "fwhm_x_mm": 320.3081168576399,
+      "fwhm_y_mm": 215.2967558428983,
+      "peak_dT_K": 1.912017822265625,
+      "peak_dT_above_bg_K": 0.7840700246842445,
+      "theta_deg": 3.0078136389156773,
+      "centroid_px": [
+        241.6664568975242,
+        48.00000000000001
+      ]
+    }
+  ],
+  "derived_beam_model": {
+    "profile_form": "dT(x,y;d) = peak(d) * exp(-0.5*((x/sigma_x(d))^2 + (y/sigma_y(d))^2))",
+    "sigma_x_vs_d": {
+      "slope_mm_per_mm": 0.14089272249630058,
+      "intercept_mm": 63.42367916163972,
+      "half_div_deg": 8.019770211127543,
+      "virtual_source_d_mm": -450.1558209531016
+    },
+    "sigma_y_vs_d": {
+      "slope_mm_per_mm": 0.06875532174259583,
+      "intercept_mm": 56.96045340867234,
+      "half_div_deg": 3.9331997510980625,
+      "virtual_source_d_mm": -828.4515578578664
+    },
+    "aspect_ratio_x_over_y_mean": 1.4154102043068917,
+    "peak_vs_d_powerlaw": {
+      "K_amp_K_mm_to_power": 319.0857993399428,
+      "exponent": -0.9767236513167151,
+      "exponent_minus_2_residual": 1.023276348683285
+    }
+  }
+}

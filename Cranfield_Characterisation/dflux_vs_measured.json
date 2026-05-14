@@ -1,0 +1,53 @@
+{
+  "convention_note": "All sigma values in DFLUX convention exp(-(r/sigma)^2). Measured values from beam_shape_summary_seq.json were in standard convention exp(-0.5*(r/sigma)^2); converted via sigma_DFLUX = sqrt(2)*sigma_std.",
+  "DFLUX_reference": {
+    "SIGMA_PER_MM": 0.1751,
+    "SIGMA_VIRT": 2.79,
+    "SG_N": 2.0,
+    "circular": true,
+    "half_divergence_deg": 9.931804735902709
+  },
+  "measured": {
+    "standoffs_mm": [
+      300,
+      400,
+      500
+    ],
+    "sigma_x_mm": [
+      254.1498874794824,
+      278.75672142374566,
+      229.97256130457396
+    ],
+    "sigma_y_mm": [
+      191.05292202743698,
+      197.97441843840724,
+      217.58129048263086
+    ],
+    "aspect_x_over_y": [
+      1.3302590967071632,
+      1.4080441484437092,
+      1.0569500750476166
+    ],
+    "sigma_x_vs_d": {
+      "slope_mm_per_mm": -0.12088663087454209,
+      "intercept_mm": 302.6477090857508,
+      "half_div_deg": -6.892847216382896
+    },
+    "sigma_y_vs_d": {
+      "slope_mm_per_mm": 0.1326418422759694,
+      "intercept_mm": 149.14614007243725,
+      "half_div_deg": 7.555712372732351
+    }
+  },
+  "DFLUX_vs_measured": {
+    "slope_error_x_pct": -169.03862414308512,
+    "slope_error_y_pct": -24.24794844319281,
+    "virtual_offset_diff_x_mm": 299.8577090857508,
+    "virtual_offset_diff_y_mm": 146.35614007243726,
+    "delta_sigma_pct_per_standoff": [
+      302.38865645961624,
+      227.2903610202889,
+      147.70525336905294
+    ]
+  }
+}

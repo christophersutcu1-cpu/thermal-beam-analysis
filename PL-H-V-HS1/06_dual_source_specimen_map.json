@@ -1,0 +1,191 @@
+{
+  "beam_model_source": "beam_shape_summary_seq.json",
+  "beam_model": {
+    "sigma_x_mm(z)": "0.12908*z + 8.393",
+    "sigma_y_mm(z)": "0.13239*z + 4.513",
+    "profile": "I0(z)*exp(-0.5*(rx^2/sx^2+ry^2/sy^2)), I0 = P/(2*pi*sx*sy)",
+    "P_anchor_K_mm2": 544662.9935859409,
+    "caveat_700mm_anchor_deviation": "-38% vs energy conservation \u2014 absolute levels at long standoff may be optimistic; geometry/uniformity results unaffected"
+  },
+  "specimen_mm": [
+    320.0,
+    175.0
+  ],
+  "objective": "CoV(face) + 2.0*CoV(width profile); highest angle within 2% of best score preferred",
+  "sweep": {
+    "standoff_mm": [
+      300.0,
+      750.0
+    ],
+    "angle_deg": [
+      0.0,
+      60.0
+    ],
+    "offset_mm": [
+      -160.0,
+      160.0
+    ]
+  },
+  "optimum": {
+    "d_mm": 750.0,
+    "angle_deg": 60.0,
+    "offset_mm": 66.5,
+    "cov_face": 0.09928725615611378,
+    "cov_width": 0.005075021773381135,
+    "score": 0.10943729970287605,
+    "mean_K": 5.584634088156607,
+    "min_K": 4.253598663349346,
+    "max_K": 6.304950688522567,
+    "width_ripple_pct": 1.9423755227531778,
+    "lamp_positions_mm": {
+      "left": [
+        -716.019052838329,
+        0.0,
+        375.00000000000006
+      ],
+      "right": [
+        716.019052838329,
+        0.0,
+        375.00000000000006
+      ]
+    },
+    "aim_points_mm": {
+      "left": [
+        -66.5,
+        0.0
+      ],
+      "right": [
+        66.5,
+        0.0
+      ]
+    },
+    "unbiased_best_score": 0.10922325022372696
+  },
+  "per_standoff_best": [
+    {
+      "d_mm": 300.0,
+      "angle_deg": 60.0,
+      "offset_mm": 75.0,
+      "cov_face": 0.488823930696129,
+      "cov_width": 0.07478059751774323,
+      "score": 0.6383851257316154,
+      "mean_K": 14.555162081029426,
+      "min_K": 1.6192230760641073,
+      "max_K": 28.347935946407706,
+      "width_ripple_pct": 25.19486485437089
+    },
+    {
+      "d_mm": 350.0,
+      "angle_deg": 60.0,
+      "offset_mm": 70.0,
+      "cov_face": 0.3868827054639217,
+      "cov_width": 0.0503902721132664,
+      "score": 0.4876632496904545,
+      "mean_K": 13.311450427801088,
+      "min_K": 2.682210543024079,
+      "max_K": 22.259740376110052,
+      "width_ripple_pct": 19.572063734393208
+    },
+    {
+      "d_mm": 400.0,
+      "angle_deg": 60.0,
+      "offset_mm": 70.0,
+      "cov_face": 0.3096315437177422,
+      "cov_width": 0.035643587899953186,
+      "score": 0.38091871951764855,
+      "mean_K": 11.859164156680654,
+      "min_K": 3.724740067034545,
+      "max_K": 17.878204134927394,
+      "width_ripple_pct": 12.790773798369049
+    },
+    {
+      "d_mm": 450.0,
+      "angle_deg": 60.0,
+      "offset_mm": 70.0,
+      "cov_face": 0.25226493360636243,
+      "cov_width": 0.026350598698193478,
+      "score": 0.3049661310027494,
+      "mean_K": 10.54855689153549,
+      "min_K": 4.427015826481366,
+      "max_K": 14.719905582146534,
+      "width_ripple_pct": 8.568646059807916
+    },
+    {
+      "d_mm": 500.0,
+      "angle_deg": 60.0,
+      "offset_mm": 65.0,
+      "cov_face": 0.2110162061558658,
+      "cov_width": 0.018785732922418637,
+      "score": 0.24858767200070309,
+      "mean_K": 9.584293879812531,
+      "min_K": 4.738896855365958,
+      "max_K": 12.53217321324915,
+      "width_ripple_pct": 7.785107283208721
+    },
+    {
+      "d_mm": 550.0,
+      "angle_deg": 60.0,
+      "offset_mm": 65.0,
+      "cov_face": 0.1773626057391526,
+      "cov_width": 0.013945998723456808,
+      "score": 0.20525460318606623,
+      "mean_K": 8.549823027350687,
+      "min_K": 4.880730072616544,
+      "max_K": 10.69222805041461,
+      "width_ripple_pct": 5.6681474648260055
+    },
+    {
+      "d_mm": 600.0,
+      "angle_deg": 60.0,
+      "offset_mm": 65.0,
+      "cov_face": 0.15106236298766512,
+      "cov_width": 0.010578374037051547,
+      "score": 0.1722191110617682,
+      "mean_K": 7.651924095874327,
+      "min_K": 4.8457110192682125,
+      "max_K": 9.24119152670903,
+      "width_ripple_pct": 4.25711709264652
+    },
+    {
+      "d_mm": 650.0,
+      "angle_deg": 60.0,
+      "offset_mm": 65.0,
+      "cov_face": 0.1301710130573356,
+      "cov_width": 0.008162636782433137,
+      "score": 0.14649628662220188,
+      "mean_K": 6.87385310384995,
+      "min_K": 4.701609462769138,
+      "max_K": 8.074655291018331,
+      "width_ripple_pct": 3.2967235995689883
+    },
+    {
+      "d_mm": 700.0,
+      "angle_deg": 60.0,
+      "offset_mm": 65.0,
+      "cov_face": 0.11332579704209934,
+      "cov_width": 0.006400057867553524,
+      "score": 0.1261259127772064,
+      "mean_K": 6.198981515331803,
+      "min_K": 4.4960987960123155,
+      "max_K": 7.121390194021464,
+      "width_ripple_pct": 2.631072039621671
+    },
+    {
+      "d_mm": 750.0,
+      "angle_deg": 60.0,
+      "offset_mm": 65.0,
+      "cov_face": 0.09955748344997156,
+      "cov_width": 0.005113204726577102,
+      "score": 0.10978389290312576,
+      "mean_K": 5.612180632645622,
+      "min_K": 4.260508347200679,
+      "max_K": 6.331360533614114,
+      "width_ripple_pct": 2.162535822238889
+    }
+  ],
+  "notes": [
+    "offset > 0: each lamp aims at its own side of centre; < 0: cross-fire",
+    "standoff = lamp-to-aim-point distance along the lamp axis",
+    "mean/min/max K are cardboard-absorber dT-equivalents for a 5 s pulse at the characterisation operating point, both lamps"
+  ]
+}

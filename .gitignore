@@ -4,6 +4,7 @@ __pycache__/
 
 # Large / regenerable caches and source captures (kept out of git)
 _seq_cache/
+_seq_cache_*/
 wetransfer_*/
 BosonCaptures/
 

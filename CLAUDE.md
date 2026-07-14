@@ -48,10 +48,12 @@ The pipeline output of Stage 3 is the design recommendation for the drone rig: w
 ```
 thermal-beam-analysis/
 ├── CLAUDE.md                       (this file — workspace methodology)
-├── PL-H-V-HS1/                     Campaign 1: Visioo PL-H-V-HS1 halogen
+├── PL-H-V-HS1/                     Campaign 1: Visioo PL-H-V-HS1 halogen — BENCH campaign
+│   │                               (Energy-Density OST paper, NOT drone; see its CLAUDE.md)
 │   ├── CLAUDE.md / README.md
 │   ├── 01_invert_seq.py … 04_dflux_vs_measured.py            Stage 1
-│   ├── (planned) 05_lens_fov_sweep.py, 06_lamp_config_sweep.py   Stages 2-3
+│   ├── 06_dual_source_specimen_map.py, 06b_*, 06c_*          bench dual-lamp optimisation
+│   │                               (paper future-work: offset/angle/standoff on 320×175 specimen)
 │   ├── _seq_cache/, *.json, *.png   outputs alongside scripts
 │   ├── _probe_*.py, _check_*.py     ad-hoc diagnostics
 │   ├── design_planning/             pre-existing planning figures (legacy 2-lamp comparisons)
@@ -69,7 +71,7 @@ thermal-beam-analysis/
 ## Per-campaign setup
 
 When starting a new campaign:
-1. Copy stages 01–06 from a working campaign (PL-H-V-HS1 once Stages 2-3 are migrated, otherwise Cranfield).
+1. Copy stages 01–06 from a working campaign (Cranfield for the drone workflow; PL-H-V-HS1's 06-series is bench-specific).
 2. Repoint `SEQ_ROOT` in 01–03 at the new `.seq` folder.
 3. Adjust camera-geometry constants (`HFOV_DEG`, `VFOV_DEG`, `SENSOR_W_PX`, `SENSOR_H_PX`, `COUNT_TO_K`) and absorber `ρcδ / α` if the rig differs.
 4. Stages 2 and 3 read `beam_derived_combined.json` automatically — no manual repointing needed if the upstream pipeline ran.
@@ -82,6 +84,10 @@ When starting a new campaign:
 - Stage 1 outputs and Stage 2/3 design figures all live next to the script that wrote them, named after the script.
 - Pipeline scripts use `os.path.dirname(os.path.abspath(__file__))` to locate I/O — moving a script moves its outputs with it.
 - Stage 1 output `beam_derived_combined.json` is the public interface between Stage 1 and Stages 2/3.
+- **Exception — PL-H-V-HS1**: its canonical beam model is `beam_shape_summary_seq.json`
+  (from `02_summarise_standoffs.py`; correct 300/500/700 mm standoffs + tilt correction).
+  Its `beam_derived_combined.json` is a superseded preview — do not use. See
+  `PROVENANCE_STANDOFFS.md`.
 
 ## Downstream (Abaqus DFLUX)
 

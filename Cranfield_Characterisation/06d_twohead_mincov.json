@@ -1,0 +1,16 @@
+{
+  "standoff_mm": 300.0,
+  "sigma_x_mm": 86.19158129940001,
+  "sigma_y_mm": 88.64950913912888,
+  "fov_w_mm": 127.53393700201327,
+  "fov_h_mm": 102.02106108982562,
+  "bulb_gap_mm": 25.0,
+  "optimal_head_sep_mm": 181.0,
+  "min_cov_pct": 4.913598460949674,
+  "flat_band_mm": [
+    169.0,
+    192.0
+  ],
+  "sigma_y_cov_floor_pct": 4.910353450614886,
+  "mapping": "head_sep = d1 + sqrt(2)*d2  (lamps aimed ~normal at FOV)"
+}

@@ -25,15 +25,20 @@ from flirpy.io.seq import Splitter
 
 # ---- I/O --------------------------------------------------------------------
 REPO_ROOT  = os.path.dirname(os.path.abspath(__file__))
-SEQ_ROOT   = os.path.join(REPO_ROOT, "wetransfer_300mm-seq_2026-05-13_1259")
+# Refined run (2026-06-23): new FLIR A655sc capture set, CORRECTLY labelled at the
+# true standoffs 300/500/700 mm (unlike the 2026-05-13 set — see PROVENANCE_STANDOFFS.md).
+SEQ_ROOT   = os.path.join(REPO_ROOT, "wetransfer_thermography-seq-files_2026-06-19_1302")
 OUTPUT_PNG = os.path.join(REPO_ROOT, "beam_derived_combined.png")
 RESULTS_JSON = os.path.join(REPO_ROOT, "beam_derived_combined.json")
-CACHE_DIR  = os.path.join(REPO_ROOT, "_seq_cache")
+# Fresh cache dir: _seq_cache is keyed by .seq basename, and the new 300mm/500mm
+# basenames would otherwise collide with the OLD set's cache (whose 500mm holds
+# true-700 mm frames). Keep the new captures in their own cache.
+CACHE_DIR  = os.path.join(REPO_ROOT, "_seq_cache_0619")
 
 SESSIONS = [
     (300, os.path.join(SEQ_ROOT, "300mm.seq"), "#6bcb77"),
-    (400, os.path.join(SEQ_ROOT, "400mm.seq"), "#ffd93d"),
-    (500, os.path.join(SEQ_ROOT, "500mm.seq"), "#ff6b6b"),
+    (500, os.path.join(SEQ_ROOT, "500mm.seq"), "#ffd93d"),
+    (700, os.path.join(SEQ_ROOT, "700mm.seq"), "#ff6b6b"),
 ]
 
 # ---- Camera -----------------------------------------------------------------
@@ -336,7 +341,7 @@ ax_sum.text(0.04, 0.96, text, color="white", fontsize=9.5, family="monospace",
             va="top", ha="left", transform=ax_sum.transAxes)
 
 fig.suptitle(
-    "Combined beam analysis  |  300 / 400 / 500 mm @ FLIR A655sc + FOL18\n"
+    "Combined beam analysis  |  300 / 500 / 700 mm @ FLIR A655sc + FOL18\n"
     "Joint fit of dT(x,y) across all standoffs -> single derived beam model for DFLUX",
     color="white", fontsize=13, y=0.985)
 

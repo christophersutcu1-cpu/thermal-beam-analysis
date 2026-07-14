@@ -1,5 +1,19 @@
 """
-Beam shape analysis for FLIR A655sc .seq captures at 300, 400, 500 mm.
+================================ READ ME FIRST ================================
+SUPERSEDED -- DO NOT USE THE sigma OUTPUTS OF THIS SCRIPT.
+  (1) It labels standoffs by the RAW .seq filenames (300/400/500 mm), which are
+      MIS-LABELLED. The true standoffs are 300/500/700 mm (user confirmed
+      2026-05-14). Because mm/px scales linearly with standoff, the wrong labels
+      bias sigma by up to ~20%.
+  (2) It applies NO camera-tilt (1/cos 15 deg) correction.
+The CANONICAL beam model, sigma(d) = 0.185 d + 9.1 mm (which feeds the DFLUX),
+comes from 02_summarise_standoffs.py -- correct standoffs + tilt correction.
+Use 02. Treat this script's JSON/PNG as a rough preview only.
+NOTE: the .seq files are deliberately NOT renamed, because _seq_cache/ is keyed
+by .seq basename; renaming would mis-pair cached frames. See PROVENANCE note.
+==============================================================================
+
+Beam shape analysis for FLIR A655sc .seq captures (true standoffs 300/500/700 mm).
 
 Adapted from beam_shape_analysis.py (Boson TIFF pipeline). Reads FLIR .seq via
 flirpy, converts radiometric counts to Kelvin (count * 0.04), subtracts baseline,
@@ -32,9 +46,12 @@ RESULTS_JSON = os.path.join(REPO_ROOT, "beam_shape_analysis_seq.json")
 CACHE_DIR = os.path.join(REPO_ROOT, "_seq_cache")  # extracted frames cached here
 
 SESSIONS = [
+    # .seq filenames are mis-labelled; true standoffs are 300/500/700 mm
+    # (user confirmed 2026-05-14). Labels corrected below. This script still
+    # lacks the 1/cos(15 deg) tilt correction applied in 02 -- see banner.
     (300, os.path.join(SEQ_ROOT, "300mm.seq")),
-    (400, os.path.join(SEQ_ROOT, "400mm.seq")),
-    (500, os.path.join(SEQ_ROOT, "500mm.seq")),
+    (500, os.path.join(SEQ_ROOT, "400mm.seq")),
+    (700, os.path.join(SEQ_ROOT, "500mm.seq")),
 ]
 SESSION_COLS = ["#6bcb77", "#ffd93d", "#ff6b6b"]
 

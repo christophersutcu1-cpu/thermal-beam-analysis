@@ -45,7 +45,9 @@ Requirements:
    0.10–0.40 s, 20 mm smooth) — removes shot-to-shot lamp variance and
    verifies the aim (asymmetry ≤ 5 %).
 3. Techniques: raw ΔT · PIM · TSR 1st/2nd derivatives · PCT EOFs 2–4 · PPT
-   phase at 6.8 / 1.7 / 0.76 / 0.43 / 0.19 / 0.11 Hz (depths 0.3–2.4 mm).
+   phase at f_b = α₃₃/(πz²) per depth: 6.8 / 1.7 / 0.76 / 0.43 / 0.19 / 0.11 Hz
+   at k₃₃ = 2.9 W/mK, or ×0.86 (5.9 … 0.09 Hz) at k₃₃ = 2.5. Recompute from the
+   settled k₃₃ at analysis time; the recipe itself is insensitive to this choice.
 4. Per defect: CNR = |ROI_def − ROI_sound| / σ_sound (6×6 mm insert centre vs
    10–20 mm same-section annulus). Detected = CNR ≥ 3.
 

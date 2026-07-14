@@ -56,6 +56,11 @@ Material properties (paper Table 1, representative, refs [31,32]):
 
 Derived: through-thickness diffusivity α₃₃ = 1.93 mm²/s; in-plane α₁₁ = 3.86 mm²/s;
 through-thickness effusivity e = √(k₃₃ρCp) ≈ 2086 W·s½/m²K.
+**k₃₃ is uncertain — user estimates possibly ≈ 2.5 W/mK.** Sensitivity checked
+(2026-07): the 06d recipe is insensitive (worst-defect contrast −2 to −4 %, peak
+time +0.1 s, surface rise +1 K). Only analysis-time values shift: PPT blind
+frequencies scale with α₃₃ (×0.86 at k₃₃ = 2.5; 2.4 mm defect 0.11 → 0.09 Hz).
+Recompute f_b from the settled k₃₃ before PPT analysis.
 
 ## Beam model — which file is canonical
 
